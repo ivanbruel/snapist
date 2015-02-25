@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SJx-g9-kNw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kQR-Bo-7Wa">
+            <objects>
+                <navigationController id="SJx-g9-kNw" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="0eb-RC-0od">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C2I-aw-IcX" kind="relationship" relationship="rootViewController" id="dUM-Sl-je7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yb-Eo-F6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="404"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D3a-Pt-xMs">
+            <objects>
+                <viewController id="C2I-aw-IcX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SxX-c0-LFP"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCF-SP-eUC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ix-vK-0p4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skw-W2-NkN">
+                                <rect key="frame" x="176" y="98" width="249" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="3jJ-ee-bw5"/>
+                                    <constraint firstAttribute="height" constant="47" id="OvG-6k-WiX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-bs-Faa">
+                                <rect key="frame" x="176" y="198" width="249" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="tlJ-3Y-8u5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-Kn-Rr7">
+                                <rect key="frame" x="176" y="295" width="249" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fill me please" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceN-1F-ATU">
+                                <rect key="frame" x="176" y="247" width="249" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yhE-D8-0vt"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P4O-bs-Faa" firstAttribute="top" secondItem="Skw-W2-NkN" secondAttribute="bottom" constant="53" id="2fl-YM-wQk"/>
+                            <constraint firstItem="ceN-1F-ATU" firstAttribute="width" secondItem="P4O-bs-Faa" secondAttribute="width" id="Btb-Hl-JOT"/>
+                            <constraint firstItem="ceN-1F-ATU" firstAttribute="centerX" secondItem="P4O-bs-Faa" secondAttribute="centerX" constant="-0.5" id="CeZ-GL-QZw"/>
+                            <constraint firstItem="P4O-bs-Faa" firstAttribute="width" secondItem="Skw-W2-NkN" secondAttribute="width" id="MwN-aE-kNC"/>
+                            <constraint firstItem="UL7-Kn-Rr7" firstAttribute="height" secondItem="ceN-1F-ATU" secondAttribute="height" id="SxJ-Cy-TwI"/>
+                            <constraint firstItem="Skw-W2-NkN" firstAttribute="top" secondItem="SxX-c0-LFP" secondAttribute="bottom" constant="34" id="UQS-Po-OL9"/>
+                            <constraint firstItem="ceN-1F-ATU" firstAttribute="top" secondItem="P4O-bs-Faa" secondAttribute="bottom" constant="2" id="V9Y-sK-PFS"/>
+                            <constraint firstItem="P4O-bs-Faa" firstAttribute="centerX" secondItem="Skw-W2-NkN" secondAttribute="centerX" id="ZZw-eJ-Whn"/>
+                            <constraint firstItem="UL7-Kn-Rr7" firstAttribute="centerX" secondItem="ceN-1F-ATU" secondAttribute="centerX" id="d7i-bP-2nw"/>
+                            <constraint firstItem="UL7-Kn-Rr7" firstAttribute="width" secondItem="ceN-1F-ATU" secondAttribute="width" id="dvU-ZZ-pBx"/>
+                            <constraint firstAttribute="centerX" secondItem="Skw-W2-NkN" secondAttribute="centerX" id="sAe-zf-bM3"/>
+                            <constraint firstItem="UL7-Kn-Rr7" firstAttribute="top" secondItem="ceN-1F-ATU" secondAttribute="bottom" constant="18" id="xwL-Xu-iTf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HWe-3D-0u5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9IZ-al-dlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="421"/>
+        </scene>
+    </scenes>
+</document>
