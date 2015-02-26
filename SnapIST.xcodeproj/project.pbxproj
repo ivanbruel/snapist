@@ -15,6 +15,9 @@
 		302366C61A9B9E9800520510 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302366C51A9B9E9800520510 /* Channel.swift */; };
 		302366C91A9BA09E00520510 /* Channel+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302366C81A9BA09E00520510 /* Channel+Networking.swift */; };
 		302366CC1A9BA6A900520510 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302366CB1A9BA6A900520510 /* Alamofire.swift */; };
+		3092B3D01A9E5D9500E693BF /* UITableViewCell+SnapIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092B3CF1A9E5D9500E693BF /* UITableViewCell+SnapIST.swift */; };
+		3092B3D31A9E645400E693BF /* ChatViewController+SnapIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092B3D21A9E645400E693BF /* ChatViewController+SnapIST.swift */; };
+		30DD647E1A9E53830027A9B5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD647D1A9E53830027A9B5 /* ChatViewController.swift */; };
 		30FA89A01A9D31620084E390 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA899F1A9D31620084E390 /* Message.swift */; };
 		30FA89A41A9D34180084E390 /* Message+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA89A31A9D34180084E390 /* Message+Networking.swift */; };
 /* End PBXBuildFile section */
@@ -23,13 +26,16 @@
 		3023669C1A9B9E3F00520510 /* SnapIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapIST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		302366A01A9B9E3F00520510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302366A11A9B9E3F00520510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		302366A31A9B9E3F00520510 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		302366A31A9B9E3F00520510 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelsViewController.swift; path = "Classes/View Controllers/ChannelsViewController.swift"; sourceTree = "<group>"; };
 		302366A61A9B9E3F00520510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		302366A81A9B9E3F00520510 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		302366AB1A9B9E3F00520510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		302366C51A9B9E9800520510 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Classes/Model/Channel.swift; sourceTree = "<group>"; };
 		302366C81A9BA09E00520510 /* Channel+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Channel+Networking.swift"; path = "Classes/Model/Extensions/Channel+Networking.swift"; sourceTree = "<group>"; };
 		302366CB1A9BA6A900520510 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		3092B3CF1A9E5D9500E693BF /* UITableViewCell+SnapIST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+SnapIST.swift"; path = "Classes/Extensions/UITableViewCell+SnapIST.swift"; sourceTree = "<group>"; };
+		3092B3D21A9E645400E693BF /* ChatViewController+SnapIST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ChatViewController+SnapIST.swift"; path = "Classes/View Controllers/Extensions/ChatViewController+SnapIST.swift"; sourceTree = "<group>"; };
+		30DD647D1A9E53830027A9B5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = "Classes/View Controllers/ChatViewController.swift"; sourceTree = "<group>"; };
 		30FA899F1A9D31620084E390 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Classes/Model/Message.swift; sourceTree = "<group>"; };
 		30FA89A31A9D34180084E390 /* Message+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Networking.swift"; path = "Classes/Model/Extensions/Message+Networking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,10 +89,11 @@
 		302366C11A9B9E4700520510 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				302366CA1A9BA6A900520510 /* Frameworks */,
+				3092B3CE1A9E5D7B00E693BF /* Extensions */,
 				302366C41A9B9E7500520510 /* Model */,
 				302366C31A9B9E5800520510 /* View Controllers */,
 				302366C21A9B9E4F00520510 /* App Delegate */,
+				302366CA1A9BA6A900520510 /* Frameworks */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -103,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				302366A31A9B9E3F00520510 /* ChannelsViewController.swift */,
+				30DD647D1A9E53830027A9B5 /* ChatViewController.swift */,
 				302366A51A9B9E3F00520510 /* Main.storyboard */,
+				3092B3D11A9E641A00E693BF /* Extensions */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -111,9 +120,9 @@
 		302366C41A9B9E7500520510 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				302366C71A9BA08500520510 /* Extensions */,
 				302366C51A9B9E9800520510 /* Channel.swift */,
 				30FA899F1A9D31620084E390 /* Message.swift */,
+				302366C71A9BA08500520510 /* Extensions */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -133,6 +142,22 @@
 				302366CB1A9BA6A900520510 /* Alamofire.swift */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		3092B3CE1A9E5D7B00E693BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3092B3CF1A9E5D9500E693BF /* UITableViewCell+SnapIST.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3092B3D11A9E641A00E693BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3092B3D21A9E645400E693BF /* ChatViewController+SnapIST.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +232,9 @@
 			files = (
 				30FA89A41A9D34180084E390 /* Message+Networking.swift in Sources */,
 				302366A41A9B9E3F00520510 /* ChannelsViewController.swift in Sources */,
+				3092B3D01A9E5D9500E693BF /* UITableViewCell+SnapIST.swift in Sources */,
+				30DD647E1A9E53830027A9B5 /* ChatViewController.swift in Sources */,
+				3092B3D31A9E645400E693BF /* ChatViewController+SnapIST.swift in Sources */,
 				302366CC1A9BA6A900520510 /* Alamofire.swift in Sources */,
 				302366C61A9B9E9800520510 /* Channel.swift in Sources */,
 				302366A21A9B9E3F00520510 /* AppDelegate.swift in Sources */,

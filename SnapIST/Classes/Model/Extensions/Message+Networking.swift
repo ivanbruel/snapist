@@ -15,7 +15,7 @@ extension Message {
         if let jsonUnwrapped = json {
             if let id = jsonUnwrapped["id"] as? Int {
                 if let text = jsonUnwrapped["text"] as? String {
-                    if let timestamp = timestampFromString(jsonUnwrapped["timestamp"] as? String) {
+                    if let timestamp = timestampFromString(jsonUnwrapped["updatedAt"] as? String) {
                         if let username = jsonUnwrapped["username"] as? String {
                             return Message(id: id, text: text, timestamp: timestamp, username: username)
                         }
@@ -31,7 +31,7 @@ extension Message {
         if let jsonUnwrapped = json {
             let id = jsonUnwrapped["id"] as? Int
             let text = jsonUnwrapped["text"] as? String
-            let timestamp = timestampFromString(jsonUnwrapped["timestamp"] as? String)
+            let timestamp = timestampFromString(jsonUnwrapped["updatedAt"] as? String)
             let username = jsonUnwrapped["username"] as? String
             
             if id != nil && text != nil && timestamp != nil && username != nil {

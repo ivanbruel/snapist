@@ -24,7 +24,7 @@ class Message {
     
     var formattedText: String {
         get {
-            return "[\(formattedTimestamp)][\(username)]: \(text)"
+            return "[\(formattedTimestamp)][\(username)]:\(text)"
         }
     }
     
@@ -35,5 +35,6 @@ class Message {
             return dateFormatter.stringFromDate(timestamp)
         }
     }
+    
     
 }

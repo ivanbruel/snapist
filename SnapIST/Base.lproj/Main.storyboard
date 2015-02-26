@@ -19,6 +19,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bpi-F0-Evc" id="VHW-VH-InF">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nbb-Jo-WUB" kind="show" id="yYA-Fa-MiN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,6 +34,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsU-94-0rZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="703" y="317"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="5F9-uC-33z">
+            <objects>
+                <viewController id="nbb-Jo-WUB" customClass="ChatViewController" customModule="SnapIST" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cBI-AW-Fdu"/>
+                        <viewControllerLayoutGuide type="bottom" id="81L-j8-1fo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nIF-To-EcH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FTr-hb-K2H">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="cellIdentifier" id="4f1-1a-NUs">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4f1-1a-NUs" id="8Vg-3E-tga">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nbb-Jo-WUB" id="lgV-QY-9Gj"/>
+                                    <outlet property="delegate" destination="nbb-Jo-WUB" id="UyY-KT-BJx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FTr-hb-K2H" secondAttribute="trailing" id="7eP-LP-N75"/>
+                            <constraint firstItem="FTr-hb-K2H" firstAttribute="leading" secondItem="nIF-To-EcH" secondAttribute="leading" id="Ale-p7-ju2"/>
+                            <constraint firstItem="81L-j8-1fo" firstAttribute="top" secondItem="FTr-hb-K2H" secondAttribute="bottom" id="dMN-Q2-O7P"/>
+                            <constraint firstItem="FTr-hb-K2H" firstAttribute="top" secondItem="cBI-AW-Fdu" secondAttribute="bottom" id="gik-HD-8dD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FTr-hb-K2H" id="EHG-kh-vUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbV-A8-yn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="316"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6TQ-GG-rKc">

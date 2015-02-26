@@ -12,7 +12,8 @@ extension Channel {
     
     // MARK: Constants
     private struct Constants {
-        static let url = "http://192.168.1.86:1337/channels"
+        static let channelsURL = "http://52.16.55.73/channels"
+        static let messagesURL = "http://52.16.55.73/channels/%d/messages"
     }
     
     // MARK: Serialization
@@ -29,7 +30,7 @@ extension Channel {
     
     // MARK: Networking
     class func findAll(response: ([Channel]?, NSError?) -> Void) {
-        request(.GET, Constants.url, parameters: nil).responseJSON { (_, _, json, error) -> Void in
+        request(.GET, Constants.channelsURL, parameters: nil).responseJSON { (_, _, json, error) -> Void in
             if let jsonArray = json as? [[String: AnyObject]] {
                 var channelsArray: [Channel] = []
                 for channelJSON in jsonArray {
@@ -45,7 +46,8 @@ extension Channel {
     }
     
     func getMessages(response: ([Message]?, NSError?) -> Void) {
-        request(.GET, Constants.url, parameters: nil).responseJSON { (_, _, json, error) -> Void in
+        let url = String(format: Constants.messagesURL, id)
+        request(.GET, url, parameters: nil).responseJSON { (_, _, json, error) -> Void in
             if let jsonArray = json as? [[String: AnyObject]] {
                 var messagesArray: [Message] = []
                 for messageJSON in jsonArray {
